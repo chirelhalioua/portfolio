@@ -1,0 +1,313 @@
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    line-height: 1.6;
+    background: #f9f9f9;
+}
+
+.header {
+    background: #3b3020;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.header-content {
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+    border: 4px solid #fff;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+}
+
+/* Conteneur du texte avec animation machine à écrire */
+.job-title {
+    font-family: "Courier New", Courier, monospace; /* Police de style machine à écrire */
+    font-size: 1em;
+    margin: 0.5em 0;
+    color: black; /* Écriture noire */
+    font-weight: bold; /* Texte en gras */
+    background-color: white; /* Fond blanc */
+    border: 3px solid #e4d4c4; /* Bordure rose */
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    overflow: hidden; /* Cache le texte lors de l'animation */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    width: 30ch; /* Ajustez cette valeur à la longueur du texte */
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Animation de frappe du texte */
+@keyframes typing {
+    from { clip-path: inset(0 100% 0 0); } /* Cache le texte */
+    to { clip-path: inset(0 0 0 0); } /* Révèle le texte progressivement */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.7em;
+}
+
+
+/* Section */
+section {
+    width: 100%; /* Utilise toute la largeur disponible */
+    padding: 2em 10%; /* Ajoute du padding pour l'espacement sur les côtés */
+    background: white;
+    margin: 2em 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #333;
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive avec plus de largeur pour les projets */
+    gap: 2rem;
+    justify-items: center;
+}
+
+.project-item {
+    width: 100%;
+    max-width: 100%; /* Utilisation de toute la largeur possible */
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px; /* Fixe une hauteur uniforme pour toutes les images */
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-item img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+.project-item a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.project-item h3 {
+    color: #3B3020;
+}
+
+.project-item p {
+    color: #3B3020;
+}
+
+.projects-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3B3020;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.projects  {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement (si besoin) */
+    flex-direction: column; /* Optionnel : aligne les éléments verticalement (utile si vous avez plusieurs éléments) */
+    text-align: center; /* Assure que le texte est aussi centré */
+}
+
+.projects-btn:hover {
+    background-color: #4E3B2B;
+}
+/* Bloc expérience en pleine largeur */
+.experience {
+    padding: 20px; /* Espace intérieur autour du contenu */
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 100%; /* Utilise toute la largeur de la fenêtre */
+    margin: 0; /* Supprime le centrage et les marges automatiques */
+    border: none; /* Retire le cadre */
+    border-radius: 0; /* Supprime les coins arrondis */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Conteneur de la timeline */
+.timeline {
+    position: relative;
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 1000px; /* Largeur maximale de la timeline */
+    margin: 0 auto; /* Centre la timeline */
+    padding: 0;
+    list-style: none;
+}
+
+.timeline-item {
+    background: #fff;
+    border: 2px solid #ddd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+    width: 100%; /* Prend toute la largeur disponible */
+    box-sizing: border-box;
+}
+
+.timeline-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1em;
+    color: black;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    border-color: #3B3020;
+    transform: translateY(0);
+}
+
+/* Trait central */
+.timeline::after {
+    content: '';
+    background: #ddd;
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.experience ul {
+    padding-left: 20px; /* Ajoute un padding global à la liste */
+}
+
+.experience ul li {
+    font-weight: normal; /* Texte normal dans la section expérience */
+    margin-bottom: 10px; /* Ajoute un espace en bas de chaque élément pour plus de lisibilité */
+    padding-left: 10px; /* Décale légèrement chaque élément pour espacer du bord */
+}
+
+/* Styles pour desktop */
+@media screen and (min-width: 768px) {
+    .timeline-item {
+        width: 45%; /* Largeur des éléments de la timeline sur desktop */
+    }
+
+    .timeline-item:nth-child(odd) {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}
+
+/* Styles pour mobile */
+@media screen and (max-width: 768px) {
+    .timeline {
+        display: block;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item:nth-child(odd) {
+        margin-left: 0;
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .timeline::after {
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        top: 0;
+    }
+}
+
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3B3020;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cv {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement (si besoin) */
+    flex-direction: column; /* Optionnel : aligne les éléments verticalement (utile si vous avez plusieurs éléments) */
+    text-align: center; /* Assure que le texte est aussi centré */
+}
+
+.download-btn:hover {
+    background-color: #4E3B2B;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
