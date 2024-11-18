@@ -7,6 +7,7 @@
     <title>Portfolio - Chirel Halioua</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 
 <body>
@@ -33,46 +34,13 @@
     <!-- Main -->
     <main>
         <!-- Section compétences dynamiques -->
-        <section class="skills">
+        <section id="app" class="skills">
             <h2>Mes Compétences</h2>
             <div class="circle-container">
                 <div class="rotating-circle">
-                    <!-- Liste des compétences -->
-                    <div class="skill-item" style="transform: translate(150px, 0px);">
-                        <i class="fab fa-html5" style="font-size: 2em;"></i>
-                        <p>HTML/CSS</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(106px, 106px);">
-                        <i class="fab fa-js-square" style="font-size: 2em;"></i>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(0px, 150px);">
-                        <i class="fab fa-bootstrap" style="font-size: 2em;"></i>
-                        <p>Bootstrap</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(-106px, 106px);">
-                        <i class="fab fa-wordpress" style="font-size: 2em;"></i>
-                        <p>WordPress</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(-150px, 0px);">
-                        <i class="fab fa-php" style="font-size: 2em;"></i>
-                        <p>PHP</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(-106px, -106px);">
-                        <i class="fas fa-code" style="font-size: 2em;"></i>
-                        <p>Symfony</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(0px, -150px);">
-                        <i class="fab fa-node-js" style="font-size: 2em;"></i>
-                        <p>Node.js</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(106px, -106px);">
-                        <i class="fab fa-vuejs" style="font-size: 2em;"></i>
-                        <p>Vue.js</p>
-                    </div>
-                    <div class="skill-item" style="transform: translate(150px, 0px);">
-                        <i class="fas fa-database" style="font-size: 2em;"></i>
-                        <p>MySQL</p>
+                    <div v-for="(skill, index) in skills" :key="index" :style="getSkillPosition(index)" class="skill-item">
+                        <i :class="skill.icon" style="font-size: 2em;"></i>
+                        <p>{{ skill.name }}</p>
                     </div>
                 </div>
             </div>
@@ -110,16 +78,49 @@
         <div class="experience">
             <h2>Mon Parcours</h2>
             <ul class="timeline">
-                <li class="timeline-item">
-                    <h3>Chargée de projets web - Alternance</h3>
-                    <p>Time2Start - Montreuil 93100 <br> Septembre 2022 - Septembre 2024</p><br>
-                    <ul>
-                        <li>Améliorer une plateforme e-learning sous <strong>Vue.js</strong> et <strong>Strapi</strong>.</li>
-                        <li>Concevoir et déployer des sites <strong>WordPress</strong>.</li>
-                        <li>Assurer la gestion technique des sites web.</li>
-                    </ul>
-                </li>
-                <!-- Ajoutez plus d'éléments de parcours ici -->
+                <!-- timeline items go here -->
+<li class="timeline-item">
+            <h3>Chargée de projets web - Alternance</h3>
+            <p>Time2Start - Montreuil 93100 <br>
+                Septembre 2022 - Septembre 2024</p><br>
+            <ul>
+                <li>Améliorer une plateforme e-learning sous <strong>Vue.js</strong> et <strong>Strapi</strong> en participant à la stratégie de tests afin de corriger les bugs et renforcer la sécurité, permettant ainsi une meilleure expérience utilisateur.</li>
+                <li>Concevoir et déployer des sites <strong>WordPress</strong> adaptés aux besoins des entrepreneurs accompagnés par Time2Start, intégrant des optimisations SEO pour augmenter leur visibilité en ligne.</li>
+                <li>Assurer la gestion technique des sites web, en maintenant leur bon fonctionnement et en effectuant des mises à jour régulières.</li>
+            </ul>
+        </li>
+        <li class="timeline-item">
+            <h3>Développeuse web - Alternance</h3>
+            <p>Meimoun Cavendish - Paris 75013 <br>
+                Décembre 2021 - Août 2022</p> <br>
+            <ul>
+                <li>Mettre en place des stratégies de référencement naturel pour accroître la visibilité du site web sur les moteurs de recherche.</li>
+                <li>Créer une fiche Google My Business, contribuant à une meilleure présence locale de l’entreprise en ligne.</li>
+                <li>Centraliser les données des clients sur <strong>Access</strong> pour simplifier le traitement des devis et des factures.</li>
+            </ul>
+
+        </li>
+        <li class="timeline-item">
+            <h3>Développeuse web - Stages en équipe</h3>
+            <p> Centrale Optique - Paris 75008<br>
+                Juin 2021 et Février 2020</p><br>
+            <ul>
+                <li>Rédiger le cahier des charges</li>
+                <li>Concevoir un site e-commerce pour la vente de lentilles de contact. Langages utilisés : HTML, CSS, PHP</li>
+                <li>Gérer la base de données clients via MySQL et implémenter les fonctionnalités CRUD</li>
+                <li>Améliorer l’ergonomie et l’expérience utilisateur globale.</li>
+                <li>Optimiser les performances du site.</li>
+            </ul>
+        </li>
+        <li class="timeline-item">
+            <h3>Chargée de la clientèle - CDD</h3>
+            <p>CNP Assurances - Paris 75015 <br>
+               Août 2018</p><br> 
+            <ul>
+                <li>Effectuer les relances clientèle par mail et par téléphone pour maintenir et renforcer les relations commerciales, en suivant un planning défini.</li>
+                <li>Gérer et mettre à jour les données clients sur Excel dans une base structurée, garantissant leur exactitude et leur accessibilité.</li>
+            </ul>
+        </li>
             </ul>
         </div>
 
@@ -134,7 +135,70 @@
         <p>&copy; 2024 Chirel Halioua</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    skills: [
+                        { name: "HTML/CSS", icon: "fab fa-html5" },
+                        { name: "JavaScript", icon: "fab fa-js-square" },
+                        { name: "Bootstrap", icon: "fab fa-bootstrap" },
+                        { name: "WordPress", icon: "fab fa-wordpress" },
+                        { name: "PHP", icon: "fab fa-php" },
+                        { name: "Symfony", icon: "fas fa-code" },
+                        { name: "Node.js", icon: "fab fa-node-js" },
+                        { name: "Vue.js", icon: "fab fa-vuejs" },
+                        { name: "MySQL", icon: "fas fa-database" },
+                        { name: "MongoDB", icon: "fas fa-leaf" },
+                        { name: "GitHub", icon: "fab fa-github" },
+                        { name: "Docker", icon: "fab fa-docker" }
+                    ]
+                };
+            },
+            methods: {
+                getSkillPosition(index) {
+                    const angle = (index / this.skills.length) * 360;
+                    const x = 150 * Math.cos((angle * Math.PI) / 180);
+                    const y = 150 * Math.sin((angle * Math.PI) / 180);
+                    return {
+                        transform: `translate(${x}px, ${y}px)`
+                    };
+                }
+            }
+        }).mount("#app");
+
+        // Fonction pour détecter l'apparition des éléments au scroll
+        function onScroll() {
+            const items = document.querySelectorAll('.timeline-item');
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.8) {
+                    item.classList.add('show');
+                } else {
+                    item.classList.remove('show');
+                }
+            });
+        }
+
+        // Détection de la rotation pour les icônes sociales
+        const socialIcons = document.querySelectorAll('.social-icon');
+        
+        socialIcons.forEach(icon => {
+            icon.addEventListener('touchmove', (event) => {
+                const touch = event.touches[0];
+                const centerX = icon.offsetLeft + icon.offsetWidth / 2;
+                const centerY = icon.offsetTop + icon.offsetHeight / 2;
+                const angle = Math.atan2(touch.pageY - centerY, touch.pageX - centerX) * (180 / Math.PI);
+                icon.style.transform = `rotate(${angle}deg)`;
+            });
+        });
+
+        // Initialisation
+        window.addEventListener('scroll', onScroll);
+        window.addEventListener('load', onScroll);
+    </script>
 </body>
 
 </html>
