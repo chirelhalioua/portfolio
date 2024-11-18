@@ -1,125 +1,124 @@
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
+/* RESET CSS */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #333;
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    line-height: 1.6;
+    background: #f9f9f9;
+}
+
+/* Header */
+.header {
+    background: #3b3020;
     color: white;
-    padding: 2rem;
     text-align: center;
+    padding: 2em 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
-}
-
-header .job-title {
-    font-style: italic;
-}
-
-header .social-icons a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-header .profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
-
-/* Section styles */
-section {
-    padding: 2rem;
-    max-width: 1200px;
+.header-content {
     margin: 0 auto;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.skills .circle-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-}
-
-.rotating-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+.profile-photo {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    margin-bottom: 1em;
+    border: 4px solid #fff;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.2em 0;
+}
+
+/* Conteneur du texte avec animation machine à écrire */
+.job-title {
+    font-family: "Courier New", Courier, monospace; /* Police de style machine à écrire */
+    font-size: 1em;
+    margin: 0.5em 0;
+    color: black; /* Écriture noire */
+    font-weight: bold; /* Texte en gras */
+    background-color: white; /* Fond blanc */
+    border: 3px solid #e4d4c4; /* Bordure rose */
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    overflow: hidden; /* Cache le texte lors de l'animation */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    width: 30ch; /* Ajustez cette valeur à la longueur du texte */
+    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* Animation de frappe du texte */
+@keyframes typing {
+    from { clip-path: inset(0 100% 0 0); } /* Cache le texte */
+    to { clip-path: inset(0 0 0 0); } /* Révèle le texte progressivement */
+}
+
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.social-icons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
 
-.skill-item {
-    position: absolute;
+.social-icon {
+    color: white;
+    font-size: 1.7em;
+}
+
+/* Section Compétences */
+.competences {
+    background: white;
+    padding: 3em 0;
+    margin: 2em 0;
     text-align: center;
-    transition: transform 0.5s ease;
 }
 
-.project-item {
-    display: inline-block;
-    margin: 1rem;
-    width: 30%;
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+    justify-items: center;
 }
 
-.project-image {
+.skill {
+    width: 80%;
+    text-align: center;
+}
+
+.skill label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+progress {
     width: 100%;
-    height: auto;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
 }
 
-.projects-btn, .download-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #333;
+/* Footer */
+.footer {
+    background: #333;
     color: white;
-    text-decoration: none;
     text-align: center;
-    border-radius: 4px;
-}
-
-/* Timeline styles */
-.timeline {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline-item {
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.timeline-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+    margin-top: 2em;
 }
