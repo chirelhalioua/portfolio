@@ -157,6 +157,16 @@ h2 {
     justify-content: center;
 }
 
+.project-item a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #000; /* Définit la couleur du texte en noir */
+    transition: color 0.3s ease; /* Ajoute une transition pour l'effet hover */
+}
+
+.project-item a:hover {
+    color: #2c3e50; /* Change légèrement la couleur au survol pour un effet visuel */
+}
+
 .project-item {
     background-color: #f4f4f9;
     border-radius: 10px;
@@ -187,7 +197,6 @@ h2 {
     font-size: 0.95em;
     padding: 0 10px 20px;
     color: #666;
-    text-decoration:none;
 }
 
 .projects-btn {
@@ -200,7 +209,7 @@ h2 {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-top:30%;
+    margin-top:20%;
     
     /* Centrer le bouton */
     position: relative;
