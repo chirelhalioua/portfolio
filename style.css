@@ -261,13 +261,13 @@ h2 {
 .timeline-item p {
     font-size: 0.9em;
     margin: 0 0 10px;
-    color: black;
+    color: #3b3020;
 }
 
 .timeline-item ul {
     padding-left: 20px;
     font-size: 0.9em;
-    color: #555;
+    color: black;
 }
 
 /* CV */
