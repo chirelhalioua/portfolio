@@ -80,16 +80,6 @@ h1 {
     font-size: 1.7em;
 }
 
-/* Styles généraux */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
 h2 {
     color: #2c3e50;
     margin-bottom: 20px;
