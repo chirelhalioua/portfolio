@@ -5,76 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Chirel Halioua</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
 </head>
 
 <body>
-    <!--==================== HEADER ====================-->
+    <!-- Header -->
     <header class="header">
         <div class="header-content">
             <img src="photo-Chirel-Halioua.jpg" alt="Photo de Chirel Halioua" class="profile-photo">
-            <h1 class="name">Chirel Halioua</h1>
+            <h1>Chirel Halioua</h1>
             <h2 class="job-title">&lsaquo;Développeuse Full Stack /&rsaquo;</h2>
-
-            <!-- Social Icons -->
             <div class="social-icons">
                 <a href="mailto:chirelhalioua@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/chirel-halioua/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/chirelhalioua" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
             </div>
-        </div>       
-       
+        </div>
     </header>
 
-    <!--==================== MAIN CONTENT ====================-->
+    <!-- À propos de moi -->
+    <section class="about-me">
+        <h2>À propos de moi</h2>
+        <p>Bonjour. Je m'appelle Chirel Halioua, diplômée d’un Bac+5 en management des solutions digitales et data. Forte de 3 ans d’expérience en alternance dans le développement web, je suis passionnée par la technologie, autonome, et stimulée par les défis.Mon but ? Innover, collaborer et contribuer à des projets ambitieux où le travail en équipe fait toute la différence !</p>
+    </section>
+
+    <!-- Main -->
     <main>
+        <!-- Section compétences dynamiques -->
+        <section id="app" class="skills">
+            <h2>Mes Compétences</h2>
+            <div class="circle-container">
+                <div class="rotating-circle">
+                    <div v-for="(skill, index) in skills" :key="index" :style="getSkillPosition(index)" class="skill-item">
+                        <i :class="skill.icon" style="font-size: 2em;"></i>
+                        <p>{{ skill.name }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="about" id="about">
-    <h2>À propos de moi</h2>
-    <p>Je m'appelle Chirel Halioua, diplômée d’un Bac+5 en management des solutions digitales et data. Forte de 3 ans d’expérience en alternance dans le développement web, je suis passionnée par la technologie, autonome, et stimulée par les défis.
-<br>Mon but ? Innover, collaborer et contribuer à des projets ambitieux où le travail en équipe fait toute la différence ! <br>
-            Mes compétences incluent :</p><br>
-    <ul>
-        
-        <li><strong>Développement Full Stack :</strong> HTML/CSS, JS, Bootstrap, WordPress, PHP, Symfony, Node.js, Vue.Js</li><br>
-        <li><strong> Développement web : </strong> intégration et gestion de sites web, référencement naturel, optimisation</li><br>
-        <li><strong>Base de données relationnelles et non relationnelles :</strong> MySQL et MongoDb</li><br>
-        <li><strong>DevOps et Cloud :</strong> GitHub, GitLab, Docker, Google Cloud Platform</li><br>
-        <li>Gestion de projet Agile et méthodologies Scrum</li><br>
-    </ul>
-</section>
-                        
-       
-<section class="projects" id="projects">
-    <h2>Projets réalisés</h2>
-    <div class="project-container">
-        <div class="project-item">
-            <a href="https://github.com/chirelhalioua/projet-symfony.git" target="_blank">
-                <img src="projet-symfony.png" alt="Site en Symfony" class="project-image">
-                <h3>Site en Symfony</h3>
-                <p>Affichage des événements avec Symfony. Technologies utilisées : Symfony, Twig, MySQL.</p>
-            </a>
-        </div>
-        <div class="project-item">
-            <a href="https://github.com/chirelhalioua/API-REST.git" target="_blank">
-                <img src="projet-api.jpg" alt="API REST" class="project-image">
-                <h3>API REST</h3>
-                <p>API connectée à MongoDB, permettant la gestion d'utilisateurs et la création de posts.</p>
-            </a>
-        </div>
-        <div class="project-item">
-            <a href="#" target="_blank">
-                <img src="memoire-big-data.jpg" alt="Mémoire Big Data" class="project-image">
-                <h3>Mémoire de fin d'études</h3>
-                <p>"L'impact du Big Data sur le divertissement" (Note: 16). Ce mémoire explore l'intégration du Big Data dans l'industrie du divertissement et son potentiel d'innovation.</p>
-            </a>
-        </div>
-    </div>
-        <a href="https://github.com/chirelhalioua" class="projects-btn">Découvrir plus de projets</a>
-</section>
-
-      <div class="experience">
+        <!-- Section projets réalisés -->
+        <section class="projects" id="projects">
+            <h2>Projets réalisés</h2>
+            <div class="project-container">
+                <div class="project-item">
+                    <a href="https://github.com/chirelhalioua/projet-symfony.git" target="_blank">
+                        <img src="projet-symfony.png" alt="Site en Symfony" class="project-image">
+                        <h3>Site en Symfony</h3>
+                        <p>Affichage des événements avec Symfony. Technologies utilisées : Symfony, Twig, MySQL.</p>
+                    </a>
+                </div>
+                <div class="project-item">
+                    <a href="https://github.com/chirelhalioua/API-REST.git" target="_blank">
+                        <img src="projet-api.jpg" alt="API REST" class="project-image">
+                        <h3>API REST</h3>
+                        <p>API connectée à MongoDB, permettant la gestion d'utilisateurs et la création de posts.</p>
+                    </a>
+                </div>
+                <div class="project-item">
+                    <a href="#" target="_blank">
+                        <img src="memoire-big-data.jpg" alt="Mémoire Big Data" class="project-image">
+                        <h3>Mémoire de fin d'études</h3>
+                        <p>"L'impact du Big Data sur le divertissement" (Note: 16). Ce mémoire explore l'intégration du Big Data dans l'industrie du divertissement et son potentiel d'innovation.</p>
+                    </a>
+                </div>
+            </div>
+            <a href="https://github.com/chirelhalioua" class="projects-btn">Découvrir plus de projets</a>
+        </section>
+<div class="experience">
     <h2>Mon Parcours</h2>
     <ul class="timeline">
         <li class="timeline-item">
@@ -121,23 +121,51 @@
         </li>
     </ul>
       </div>
-
-        <section class="cv" id="cv">
+<section class="cv" id="cv">
     <h2>Curriculum Vitae</h2>
     <a href="CV-Chirel-Halioua-Developpeuse-full-stack.pdf" download class="download-btn">Télécharger mon CV</a>
 </section>
-
     </main>
 
-    <!--==================== FOOTER ====================-->
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Chirel Halioua</p>
     </footer>
-</body>
 
-</html>
+    <script>
+        const { createApp } = Vue;
 
-<script>// Fonction pour détecter l'apparition des éléments au scroll
+        createApp({
+            data() {
+                return {
+                    skills: [
+                        { name: "HTML/CSS", icon: "fab fa-html5" },
+                        { name: "JavaScript", icon: "fab fa-js-square" },
+                        { name: "Bootstrap", icon: "fab fa-bootstrap" },
+                        { name: "WordPress", icon: "fab fa-wordpress" },
+                        { name: "PHP", icon: "fab fa-php" },
+                        { name: "Symfony", icon: "fas fa-code" },
+                        { name: "Node.js", icon: "fab fa-node-js" },
+                        { name: "Vue.js", icon: "fab fa-vuejs" },
+                        { name: "MySQL", icon: "fas fa-database" },
+                        { name: "MongoDB", icon: "fas fa-leaf" },
+                        { name: "GitHub", icon: "fab fa-github" },
+                        { name: "Docker", icon: "fab fa-docker" }
+                    ]
+                };
+            },
+            methods: {
+                getSkillPosition(index) {
+                    const angle = (index / this.skills.length) * 360;
+                    const x = 150 * Math.cos((angle * Math.PI) / 180);
+                    const y = 150 * Math.sin((angle * Math.PI) / 180);
+                    return {
+                        transform: `translate(${x}px, ${y}px)`
+                    };
+                }
+            }
+        }).mount("#app");
+// Fonction pour détecter l'apparition des éléments au scroll
 function onScroll() {
     const items = document.querySelectorAll('.timeline-item');
     
@@ -150,8 +178,10 @@ function onScroll() {
         }
     });
 }
-
 // Initialisation
 window.addEventListener('scroll', onScroll);
-window.addEventListener('load', onScroll);
-</script>
+window.addEventListener('load', onScroll); 
+    </script>
+</body>
+
+    </html>
