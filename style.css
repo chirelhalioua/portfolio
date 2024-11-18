@@ -13,6 +13,7 @@ body {
     background: #f9f9f9;
 }
 
+/* Header */
 .header {
     background: #3b3020;
     color: white;
@@ -61,6 +62,13 @@ h1 {
     to { clip-path: inset(0 0 0 0); } /* Révèle le texte progressivement */
 }
 
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -71,7 +79,6 @@ h1 {
     color: white;
     font-size: 1.7em;
 }
-
 
 /* Section */
 section {
@@ -90,6 +97,7 @@ h2 {
     text-align: center;
 }
 
+/* Projets */
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive avec plus de largeur pour les projets */
@@ -141,7 +149,7 @@ h2 {
     margin-top: 30px;
 }
 
-.projects  {
+.projects {
     display: flex; /* Active Flexbox */
     justify-content: center; /* Centre le contenu horizontalement */
     align-items: center; /* Centre le contenu verticalement (si besoin) */
@@ -152,7 +160,8 @@ h2 {
 .projects-btn:hover {
     background-color: #4E3B2B;
 }
-/* Bloc expérience en pleine largeur */
+
+/* Bloc expérience */
 .experience {
     padding: 20px; /* Espace intérieur autour du contenu */
     background-color: #f4f4f4;
@@ -161,11 +170,6 @@ h2 {
     margin: 0; /* Supprime le centrage et les marges automatiques */
     border: none; /* Retire le cadre */
     border-radius: 0; /* Supprime les coins arrondis */
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
 }
 
 /* Conteneur de la timeline */
@@ -278,7 +282,7 @@ h2 {
     }
 }
 
-
+/* Bouton de téléchargement */
 .download-btn {
     display: inline-block;
     padding: 12px 24px;
@@ -303,6 +307,7 @@ h2 {
     background-color: #4E3B2B;
 }
 
+/* Footer */
 .footer {
     background: #333;
     color: white;
@@ -310,4 +315,4 @@ h2 {
     padding: 1em;
     font-size: 0.9em;
     margin-top: 2em;
-}
+    }
