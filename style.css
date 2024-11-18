@@ -5,17 +5,30 @@
     box-sizing: border-box;
 }
 
+/* Variables CSS pour la typographie et les couleurs */
+:root {
+    --font-primary: 'Arial', sans-serif;
+    --font-secondary: 'Courier New', Courier, monospace;
+    --color-dark: #3b3020;
+    --color-light: #f9f9f9;
+    --color-accent: #e4d4c4;
+    --color-primary: #3b3020;
+    --color-hover: #4e3b2b;
+    --color-footer: #333;
+    --border-radius: 10px;
+}
+
 /* Général */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-primary);
     color: black;
     line-height: 1.6;
-    background: #f9f9f9;
+    background: var(--color-light);
 }
 
 /* Header */
 .header {
-    background: #3b3020;
+    background: var(--color-dark);
     color: white;
     text-align: center;
     padding: 2em 0;
@@ -38,37 +51,35 @@ h1 {
     margin: 0.2em 0;
 }
 
-/* Conteneur du texte avec animation machine à écrire */
+/* Job Title */
 .job-title {
-    font-family: "Courier New", Courier, monospace; /* Police de style machine à écrire */
+    font-family: var(--font-secondary);
     font-size: 1em;
     margin: 0.5em 0;
-    color: black; /* Écriture noire */
-    font-weight: bold; /* Texte en gras */
-    background-color: white; /* Fond blanc */
-    border: 3px solid #e4d4c4; /* Bordure rose */
-    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: 3px solid var(--color-accent);
+    border-radius: var(--border-radius);
     padding: 10px;
     display: inline-block;
-    overflow: hidden; /* Cache le texte lors de l'animation */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    width: 30ch; /* Ajustez cette valeur à la longueur du texte */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 30ch;
     animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
 /* Animation de frappe du texte */
 @keyframes typing {
-    from { clip-path: inset(0 100% 0 0); } /* Cache le texte */
-    to { clip-path: inset(0 0 0 0); } /* Révèle le texte progressivement */
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
 }
 
-/* Animation du curseur clignotant */
 @keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
+    50% { border-color: transparent; }
 }
 
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -82,11 +93,11 @@ h1 {
 
 /* Section */
 section {
-    width: 100%; /* Utilise toute la largeur disponible */
-    padding: 2em 10%; /* Ajoute du padding pour l'espacement sur les côtés */
+    width: 100%;
+    padding: 2em 10%;
     background: white;
     margin: 2em 0;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -100,84 +111,81 @@ h2 {
 /* Projets */
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive avec plus de largeur pour les projets */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     justify-items: center;
 }
 
 .project-item {
     width: 100%;
-    max-width: 100%; /* Utilisation de toute la largeur possible */
+    max-width: 100%;
     text-align: center;
 }
 
 .project-item img {
     width: 100%;
-    height: 200px; /* Fixe une hauteur uniforme pour toutes les images */
+    height: 200px;
     border-radius: 5px;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .project-item img:hover {
-    transform: scale(1.05); /* Effet de zoom au survol */
+    transform: scale(1.05);
 }
 
 .project-item a {
-    text-decoration: none !important;
+    text-decoration: none;
     color: inherit;
 }
 
-.project-item h3 {
-    color: #3B3020;
-}
-
+.project-item h3,
 .project-item p {
-    color: #3B3020;
+    color: var(--color-primary);
 }
 
 .projects-btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #3B3020;
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-align: center;
     transition: background-color 0.3s ease;
     margin-top: 30px;
 }
 
-.projects {
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center; /* Centre le contenu verticalement (si besoin) */
-    flex-direction: column; /* Optionnel : aligne les éléments verticalement (utile si vous avez plusieurs éléments) */
-    text-align: center; /* Assure que le texte est aussi centré */
+.projects-btn:hover {
+    background-color: var(--color-hover);
 }
 
-.projects-btn:hover {
-    background-color: #4E3B2B;
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 /* Bloc expérience */
 .experience {
-    padding: 20px; /* Espace intérieur autour du contenu */
+    padding: 20px;
     background-color: #f4f4f4;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-    width: 100%; /* Utilise toute la largeur de la fenêtre */
-    margin: 0; /* Supprime le centrage et les marges automatiques */
-    border: none; /* Retire le cadre */
-    border-radius: 0; /* Supprime les coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
 }
 
-/* Conteneur de la timeline */
+/* Timeline */
 .timeline {
     position: relative;
-    width: 100%; /* Utilise toute la largeur disponible */
-    max-width: 1000px; /* Largeur maximale de la timeline */
-    margin: 0 auto; /* Centre la timeline */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
 }
@@ -187,32 +195,19 @@ h2 {
     border: 2px solid #ddd;
     padding: 15px;
     margin: 20px 0;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     position: relative;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
-    width: 100%; /* Prend toute la largeur disponible */
-    box-sizing: border-box;
-}
-
-.timeline-item h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.timeline-item p {
-    font-size: 1em;
-    color: black;
 }
 
 .timeline-item.show {
     opacity: 1;
-    border-color: #3B3020;
+    border-color: var(--color-primary);
     transform: translateY(0);
 }
 
-/* Trait central */
 .timeline::after {
     content: '';
     background: #ddd;
@@ -225,19 +220,19 @@ h2 {
 }
 
 .experience ul {
-    padding-left: 20px; /* Ajoute un padding global à la liste */
+    padding-left: 20px;
 }
 
 .experience ul li {
-    font-weight: normal; /* Texte normal dans la section expérience */
-    margin-bottom: 10px; /* Ajoute un espace en bas de chaque élément pour plus de lisibilité */
-    padding-left: 10px; /* Décale légèrement chaque élément pour espacer du bord */
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding-left: 10px;
 }
 
-/* Styles pour desktop */
+/* Responsivité */
 @media screen and (min-width: 768px) {
     .timeline-item {
-        width: 45%; /* Largeur des éléments de la timeline sur desktop */
+        width: 45%;
     }
 
     .timeline-item:nth-child(odd) {
@@ -251,7 +246,6 @@ h2 {
     }
 }
 
-/* Styles pour mobile */
 @media screen and (max-width: 768px) {
     .timeline {
         display: block;
@@ -286,30 +280,22 @@ h2 {
 .download-btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #3B3020;
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     text-align: center;
     transition: background-color 0.3s ease;
 }
 
-.cv {
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre le contenu horizontalement */
-    align-items: center; /* Centre le contenu verticalement (si besoin) */
-    flex-direction: column; /* Optionnel : aligne les éléments verticalement (utile si vous avez plusieurs éléments) */
-    text-align: center; /* Assure que le texte est aussi centré */
-}
-
 .download-btn:hover {
-    background-color: #4E3B2B;
+    background-color: var(--color-hover);
 }
 
 /* Footer */
 .footer {
-    background: #333;
+    background: var(--color-footer);
     color: white;
     text-align: center;
     padding: 1em;
