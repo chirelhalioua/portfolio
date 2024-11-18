@@ -198,7 +198,29 @@
         // Initialisation
         window.addEventListener('scroll', onScroll);
         window.addEventListener('load', onScroll);
+        document.addEventListener('DOMContentLoaded', () => {
+    
+            const circle = document.querySelector('.rotating-circle');
+
+    // Survol : Ajouter la rotation
+    circle.addEventListener('mouseover', () => {
+        circle.classList.add('rotate');
+    });
+
+    // Fin du survol : Retirer la rotation
+    circle.addEventListener('mouseout', () => {
+        circle.classList.remove('rotate');
+    });
+
+    // Clic : Activer/Désactiver la rotation
+    circle.addEventListener('click', () => {
+        circle.classList.toggle('rotate');
+    });
+});
+        
+    
     </script>
+
 </body>
 
 </html>
