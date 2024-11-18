@@ -142,6 +142,21 @@ h2 {
     color: #3b3020;
 }
 
+/* Animation de rotation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-circle.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+
 /* Projets */
 .projects {
     background-color: #ffffff;
