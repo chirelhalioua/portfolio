@@ -240,63 +240,79 @@ h2 {
     background-color: #34495e;
 }
 
+
 /* Parcours */
 .experience {
     background-color: #f9f9f9;
     padding: 40px 20px;
     margin: 20px auto;
     width: 100%;
+    max-width: 1200px; /* Limite la largeur maximale de la section */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2em;
+    color: #3b3020;
+    margin-bottom: 40px;
+}
+
+.experience .experience-container {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align:center;
+    gap: 20px;
 }
 
-.experience .title {
-    margin: 0 auto; /* Assure un centrage au cas où */
-    text-align: center !important; /* Centre le texte */
+.experience-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Timeline */
-.timeline {
-    list-style: none;
-    padding: 0;
-    width: 90%; /* Utilisation de 90% de la largeur de l'écran pour plus de flexibilité */
-    max-width: 800px; /* Limite la largeur à 800px */
-    margin: 0 auto; /* Centre la timeline */
+.experience-item:hover {
+    transform: translateY(-10px); /* Effet au survol */
 }
 
-.timeline-item {
-    margin: 20px 0;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-in-out;
+.experience-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.timeline-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.timeline-item h3 {
+.experience-item h3 {
     font-size: 1.2em;
     color: #3b3020;
     margin-bottom: 10px;
-    text-align:center;
 }
 
-.timeline-item p {
+.experience-item p {
     font-size: 0.9em;
-    margin: 0 0 10px;
     color: #3b3020;
-    text-align:center;
+    margin-bottom: 10px;
 }
 
-.timeline-item ul {
+.experience-item ul {
+    list-style: none;
+    padding: 0;
     font-size: 0.9em;
-    color: black;
-    text-align:left;
+    color: #3b3020;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experience-item ul li {
+    margin-bottom: 5px;
 }
 
 /* CV */
