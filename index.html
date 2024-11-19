@@ -167,6 +167,27 @@
         }).mount("#app");
 
         // Fonction pour détecter l'apparition des éléments au scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const experienceItems = document.querySelectorAll('.experience-item'); // Sélectionne tous les éléments d'expérience
+        
+            // Création de l'observateur d'intersection
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // L'élément entre dans le champ de vision, on lui ajoute la classe pour l'afficher
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Arrêter l'observation une fois l'élément visible
+                    }
+                });
+            }, {
+                threshold: 0.5 // L'élément est considéré visible lorsqu'il est à 50% dans le champ de vision
+            });
+        
+            // Observer chaque élément d'expérience
+            experienceItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
         
         // Détection de la rotation pour les icônes sociales
         const socialIcons = document.querySelectorAll('.social-icon');
