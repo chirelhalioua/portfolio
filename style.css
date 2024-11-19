@@ -286,6 +286,13 @@ h2 {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+/* Media query pour les appareils mobiles (écrans de moins de 768px de large) */
+@media screen and (max-width: 768px) {
+    .experience-item {
+        width: 80%; /* Sur mobile, les éléments prennent 80% de la largeur */
+    }
+}
+
 .experience-item.visible {
     opacity: 1;
     transform: translateY(0); /* Remet l'élément à sa position d'origine */
