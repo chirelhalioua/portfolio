@@ -299,7 +299,7 @@ h2 {
 }
 
 .experience-item ul {
-    list-style: none;
+    list-style: disc;
     padding: 0;
     font-size: 0.9em;
     color: #3b3020;
