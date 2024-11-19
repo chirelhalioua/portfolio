@@ -252,7 +252,7 @@ h2 {
     justify-content: center;
 }
 
-.experience h2 {
+h2 {
     text-align:center;
 }
 
@@ -292,10 +292,9 @@ h2 {
 }
 
 .timeline-item ul {
-    padding-left: 20px;
     font-size: 0.9em;
     color: black;
-    text-align:center;
+    text-align:left;
 }
 
 /* CV */
