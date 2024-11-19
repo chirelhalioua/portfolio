@@ -250,10 +250,12 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
+    text-align:center;
 }
 
-.title {
-    text-align: center;
+.experience .title {
+    margin: 0 auto; /* Assure un centrage au cas où */
+    text-align: center !important; /* Centre le texte */
 }
 
 /* Timeline */
