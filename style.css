@@ -252,6 +252,10 @@ h2 {
     justify-content: center;
 }
 
+.experience h2 {
+    text-align:center:;
+}
+
 /* Timeline */
 .timeline {
     list-style: none;
@@ -277,22 +281,22 @@ h2 {
     font-size: 1.2em;
     color: #3b3020;
     margin-bottom: 10px;
+    text-align:center:;
 }
 
 .timeline-item p {
     font-size: 0.9em;
     margin: 0 0 10px;
     color: #3b3020;
+    text-align:center:;
 }
 
 .timeline-item ul {
     padding-left: 20px;
     font-size: 0.9em;
     color: black;
+    text-align:center:;
 }
-
-
-
 
 /* CV */
 .cv {
