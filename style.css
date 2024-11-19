@@ -247,7 +247,6 @@ h2 {
     padding: 40px 20px;
     margin: 20px auto;
     width: 100%;
-    max-width: 1200px; /* Limite la largeur maximale de la section */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -281,13 +280,6 @@ h2 {
 
 .experience-item:hover {
     transform: translateY(-10px); /* Effet au survol */
-}
-
-.experience-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .experience-item h3 {
