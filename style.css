@@ -289,7 +289,13 @@ h2 {
 /* Media query pour les appareils mobiles (écrans de moins de 768px de large) */
 @media screen and (max-width: 768px) {
     .experience-item {
-        width: 80%; /* Sur mobile, les éléments prennent 80% de la largeur */
+        width: 100%; /* Sur mobile, les éléments prennent 100% de la largeur */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-item {
+        width: 90%; /* Sur les très petits écrans, les éléments prennent 90% de la largeur */
     }
 }
 
