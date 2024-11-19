@@ -245,7 +245,7 @@ h2 {
 .experience {
     background-color: #f9f9f9;
     padding: 40px 20px;
-    margin: 20px auto;
+    margin: 20px 0;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -263,8 +263,9 @@ h2 {
 
 .experience .experience-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; /* Passe en colonne pour une disposition verticale */
+    justify-content: center; /* Centrer les items verticalement */
+    align-items: center; /* Centrer les items horizontalement */
     gap: 20px;
     width: 100%;
 }
@@ -274,9 +275,11 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 80%; /* Permet aux items d'occuper 80% de la largeur de leur conteneur parent */
+    max-width: 600px; /* Limite la largeur des items à 600px */
     text-align: center;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
 }
 
 .experience-item:hover {
