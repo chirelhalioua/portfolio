@@ -266,6 +266,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .experience-item {
