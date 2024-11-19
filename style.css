@@ -91,10 +91,10 @@ h2 {
     background-color: #ffffff;
     padding: 40px 20px;
     margin: 20px auto;
-    max-width: 800px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width:100%;
 }
 
 .about-me p {
@@ -162,9 +162,10 @@ h2 {
     background-color: #ffffff;
     padding: 40px 20px;
     margin: 20px auto;
-    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width:100%;
+
 }
 
 .project-container {
@@ -244,7 +245,7 @@ h2 {
     background-color: #f9f9f9;
     padding: 40px 20px;
     margin: 20px auto;
-    max-width: 800px;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -291,7 +292,7 @@ h2 {
     text-align: center;
     padding: 40px 20px;
     margin: 20px auto;
-    max-width: 600px;
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
