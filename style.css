@@ -277,8 +277,7 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Permet aux items d'occuper 80% de la largeur de leur conteneur parent */
-    max-width: 600px; /* Limite la largeur des items à 600px */
+    width: 60%; /* Permet aux items d'occuper 80% de la largeur de leur conteneur parent */
     text-align: center;
     transition: transform 0.3s ease-in-out;
     margin-bottom: 20px; /* Ajoute un espacement entre les éléments */
