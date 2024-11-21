@@ -137,7 +137,7 @@ h2 {
     transition: transform 0.3s;
 }
 
-.skill-item : hover{
+.skill-item:hover {
     color: #c69758;
 }
 
