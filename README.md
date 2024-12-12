@@ -42,8 +42,8 @@ Les contributions sont les bienvenues ! Si vous souhaitez suggérer des amélior
 
 ## Auteur
 
-- **Votre Nom**  
-  [Lien vers votre profil LinkedIn ou Twitter]
+- **Halioua Chirel**  
+  [https://www.linkedin.com/in/chirel-halioua]
 
 ## Licence
 
