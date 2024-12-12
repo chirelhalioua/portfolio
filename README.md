@@ -39,7 +39,7 @@ Mon portfolio est un site web statique construit avec **HTML5** et **CSS3**. Il 
 
 ## 👤 Auteur
 
-- **Votre Nom**
+- **Chirel Halioua**
   
   🔗https://www.linkedin.com/in/chirel-halioua/
 
